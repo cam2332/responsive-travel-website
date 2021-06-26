@@ -16,11 +16,15 @@ if (navClose) {
 
 const navLink = document.getElementById('nav-link')
 
-navLink.forEach(navLink => navLink.addEventListener('click', () => {
-    if (navMenu) {
-        navMenu.classList.remove('show-menu')
-    }
-}))window.addEventListener('scroll', () => {
+if (navLink) {
+    navLink.forEach(navLink => navLink.addEventListener('click', () => {
+        if (navMenu) {
+            navMenu.classList.remove('show-menu')
+        }
+    }))
+}
+
+window.addEventListener('scroll', () => {
     const header = document.getElementById('header')
     if (this.scrollY >= 100) {
         header.classList.add('scroll-header')
