@@ -20,4 +20,11 @@ navLink.forEach(navLink => navLink.addEventListener('click', () => {
     if (navMenu) {
         navMenu.classList.remove('show-menu')
     }
-}))
+}))window.addEventListener('scroll', () => {
+    const header = document.getElementById('header')
+    if (this.scrollY >= 100) {
+        header.classList.add('scroll-header')
+    } else {
+        header.classList.remove('scroll-header')
+    }
+})
