@@ -68,3 +68,13 @@ videoFile.addEventListener('ended', () => {
     videoIcon.classList.remove('ri-pause-line')
     videoIcon.classList.add('ri-play-line')
 })
+
+window.addEventListener('scroll', () => {
+    const scrollUp = document.getElementById('scroll-up')
+    if (this.scrollY >= 200) {
+        scrollUp.classList.add('show-scroll')
+    } else {
+        scrollUp.classList.remove('show-scroll')
+    }
+})
+})
