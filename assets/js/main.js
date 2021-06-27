@@ -14,7 +14,7 @@ if (navClose) {
     })
 }
 
-const navLink = document.getElementById('nav-link')
+const navLink = document.querySelectorAll('.nav__link')
 
 if (navLink) {
     navLink.forEach(navLink => navLink.addEventListener('click', () => {
