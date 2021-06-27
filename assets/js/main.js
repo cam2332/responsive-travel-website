@@ -45,3 +45,26 @@ let swiper = new Swiper('.discover__container', {
         rotate: 0
     }
 })
+
+const videoFile = document.getElementById('video-file')
+const videoButton = document.getElementById('video-button')
+const videoIcon = document.getElementById('video-icon')
+
+videoButton.addEventListener('click', () => {
+    if (videoFile.paused) {
+        videoFile.play()
+
+        videoIcon.classList.add('ri-pause-line')
+        videoIcon.classList.remove('ri-play-line')
+    } else {
+        videoFile.pause()
+
+        videoIcon.classList.remove('ri-pause-line')
+        videoIcon.classList.add('ri-play-line')
+    }
+})
+
+videoFile.addEventListener('ended', () => {
+    videoIcon.classList.remove('ri-pause-line')
+    videoIcon.classList.add('ri-play-line')
+})
